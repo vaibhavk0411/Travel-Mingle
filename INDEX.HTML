@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smart Travel Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>TRAVEL MINGLE</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#plan">Plan Your Trip</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Welcome to Your Smart Travel Planner</h2>
+            <p>Plan your dream trip effortlessly with personalized itineraries tailored to your preferences.</p>
+            <button class="cta" onclick="scrollToSection('plan')">Start Planning</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We make travel planning hassle-free by offering tailored itineraries based on your interests. Whether you're an adventurer, a culture lover, or someone looking to relax, we've got the perfect plan for you.</p>
+    </section>
+
+    <section id="plan">
+        <h2>Plan Your Trip</h2>
+        <form id="trip-form" class="form-grid">
+            <div class="form-field">
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" placeholder="Enter your destination" required>
+            </div>
+
+            <div class="form-field">
+                <label for="days">Number of Days:</label>
+                <input type="number" id="days" min="1" required>
+            </div>
+
+            <div class="form-field">
+                <label for="interests">Your Interests:</label>
+                <select id="interests">
+                    <option value="adventure">Adventure</option>
+                    <option value="culture">Culture</option>
+                    <option value="relaxation">Relaxation</option>
+                    <option value="food">Food</option>
+                </select>
+            </div>
+
+            <button type="button" class="cta" onclick="generateItinerary()">Generate Itinerary</button>
+        </form>
+        <div id="itinerary-output"></div>
+    </section>
+
+    <footer>
+        <p>Contact us at <a href="mailto:info@smarttravel.com">info@smarttravel.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
